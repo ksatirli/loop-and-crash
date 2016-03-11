@@ -4,7 +4,8 @@
   "description": "An Express-based server that crashes and loops endlessly",
   "main": "index.js",
   "scripts": {
-    "test": "snyk test && npm test"
+    "test": "snyk test && npm test",
+    "start": "node index.js"
   },
   "author": "Kerim Satirli <kerim@icemobile.com>",
   "license": "Apache-2.0",
