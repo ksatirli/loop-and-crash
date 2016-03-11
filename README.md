@@ -18,7 +18,7 @@ Chose wether to invoke an endless loop, a crash or have the server respond with 
 
 The following animation shows how the application looks like, in action:
 
-![Demo of the generator in Gif format](http://frostedio-static.s3.amazonaws.com/loop-and-crash/demo-scale-50.gif)
+![Demo of the application in Gif format](http://frostedio-static.s3.amazonaws.com/loop-and-crash/demo-scale-50.gif)
 
 ### Maintainers
 
