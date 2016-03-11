@@ -1,0 +1,18 @@
+{
+    "non-interactive": false,
+    "verbose": true,
+    "commitMessage": "Release %s",
+    "tagName": "%s",
+    "tagAnnotation": "Release %s",
+    "changelogCommand": "git log --pretty=format:'* %s (%h)' [REV_RANGE]",
+    "requireCleanWorkingDir": true,
+    "dist": {
+        "repo": false
+    },
+    "npm": {
+        "publish": false
+    },
+    "github": {
+        "release": false
+    }
+}

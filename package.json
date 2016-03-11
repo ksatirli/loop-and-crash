@@ -1,0 +1,15 @@
+{
+  "name": "loop-and-crash",
+  "version": "1.0.0",
+  "description": "An Express-based server that crashes and loops endlessly",
+  "main": "index.js",
+  "scripts": {
+    "test": "snyk test && npm test"
+  },
+  "author": "Kerim Satirli <kerim@icemobile.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.13.4",
+    "snyk": "^1.11.3"
+  }
+}
