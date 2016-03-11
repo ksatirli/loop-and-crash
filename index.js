@@ -26,8 +26,13 @@ app.get('/endless-loop', function() {
   while (true) {}
 });
 
+// show instructions for /status-code
+app.get('/status-code', function(req, res) {
+  res.sendFile(path.join(__dirname + '/status-code.html'));
+});
+
 // respond with client-requested status code
-app.get('/status/:status', function(req, res) {
+app.get('/status-code/:status', function(req, res) {
   res.sendStatus(req.params.status);
 });
 
