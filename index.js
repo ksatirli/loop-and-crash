@@ -26,5 +26,10 @@ app.get('/endless-loop', function() {
   while (true) {}
 });
 
+// respond with client-requested status code
+app.get('/status/:status', function(req, res) {
+  res.sendStatus(req.params.status);
+});
+
 // hit the road!
 app.listen(configuration.port);
