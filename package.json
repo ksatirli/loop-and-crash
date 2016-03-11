@@ -12,5 +12,17 @@
   "dependencies": {
     "express": "^4.13.4",
     "snyk": "^1.11.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/frostedio/loop-and-crash.git"
+  },
+  "keywords": [
+    "express",
+    "crash",
+    "loop",
+    "status-code"
+  ],
+  "homepage": "https://bitbucket.org/frostedio/loop-and-crash#readme"
 }
