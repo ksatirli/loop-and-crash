@@ -18,6 +18,10 @@ app.get('/', function(req, res) {
 
 // crash server :-)
 app.get('/crash', function() {
+
+  console.log('Going to crash as requested.');
+  console.log('Any error messages below this line are expected.');
+
   process.exit(1);
 });
 
