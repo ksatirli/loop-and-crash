@@ -14,11 +14,11 @@ Next, start the application by running `npm start` (or: `node index.js`) and ope
 
 Chose wether to invoke an endless loop, a crash or have the server respond with a specific status code.
 
-### Demo
+### Screenshot
 
-The following animation shows how the application looks like, in action:
+The following screenshot shows how the application looks like:
 
-![Demo of the application in Gif format](http://frostedio-static.s3.amazonaws.com/loop-and-crash/demo-scale-50.gif)
+![Preview of the application in PNG format](http://frostedio-static.s3.amazonaws.com/loop-and-crash/demo-scale-50.png)
 
 ### Maintainers
 
