@@ -41,4 +41,6 @@ app.get('/status-code/:status', function(req, res) {
 });
 
 // hit the road!
-app.listen(configuration.port);
+app.listen(configuration.port, function() {
+  console.log('Server started on port ' + configuration.port);
+});
