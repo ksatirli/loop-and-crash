@@ -8,7 +8,7 @@ _Loop 'n Crash_ is geared towards creating proof-of-concepts and similar experim
 
 Setting up and using `loop-and-crash` is simple and only requires a few steps:
 
-Start by cloning this [repository](https://bitbucket.org/frostedio/loop-and-crash), then change into the application's directory (usually named  `loop-and-crash`) and install any dependencies using the `npm install` command.
+Start by cloning this [repository](https://bitbucket.org/cultivatedops/loop-and-crash), then change into the application's directory (usually named  `loop-and-crash`) and install any dependencies using the `npm install` command.
 
 Next, start the application by running `npm start` (or: `node index.js`) and open [localhost:2774](http://localhost:2774/) in your browser.
 
@@ -18,13 +18,13 @@ Chose wether to invoke an endless loop, a crash or have the server respond with 
 
 The following screenshot shows how the application looks like:
 
-![Preview of the application in PNG format](http://frostedio-static.s3.amazonaws.com/loop-and-crash/demo-scale-50.png)
+![Preview of the application in PNG format](http://cultivatedops-static.s3.amazonaws.com/loop-and-crash/demo-scale-50.png)
 
 ### Maintainers
 
 This application is currently maintained by the individuals listed below.
 
-* [Kerim Satirli](mailto:kerim@icemobile.com)
+* [Kerim Satirli](mailto:kerim@cultivatedops.com)
 
 # License
 

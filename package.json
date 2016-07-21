@@ -7,15 +7,15 @@
     "test": "snyk test && npm test",
     "start": "node index.js"
   },
-  "author": "Kerim Satirli <kerim@icemobile.com>",
+  "author": "Kerim Satirli <kerim@cultivatedops.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.14.0"
   },
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/frostedio/loop-and-crash.git"
+    "url": "git+ssh://git@bitbucket.org/cultivatedops/loop-and-crash.git"
   },
   "keywords": [
     "express",
@@ -23,5 +23,5 @@
     "loop",
     "status-code"
   ],
-  "homepage": "https://bitbucket.org/frostedio/loop-and-crash#readme"
+  "homepage": "https://bitbucket.org/cultivatedops/loop-and-crash#readme"
 }
