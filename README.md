@@ -18,7 +18,7 @@ Chose wether to invoke an endless loop, a crash or have the server respond with 
 
 The following screenshot shows how the application looks like:
 
-![Preview of the application in PNG format](http://cultivatedops-static.s3.amazonaws.com/loop-and-crash/demo-scale-50.png)
+![Preview of the application in PNG format](https://cultivatedops-static.s3.amazonaws.com/projects/loop-and-crash/demo-scale-50.png)
 
 ### Maintainers
 
