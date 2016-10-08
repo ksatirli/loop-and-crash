@@ -1,6 +1,6 @@
 # Loop 'n Crash
 
-_Loop 'n Crash_ is a [Express](http://expressjs.com/)-based server that provides _endless loops_ and _crashes_ as a service. As a bonus feature, you can output client-requested status codes to.
+_Loop 'n Crash_ is an [Express](http://expressjs.com/)-based server that provides _endless loops_ and _crashes_ as a service. As a bonus feature, you can output client-requested status codes to.
 
 _Loop 'n Crash_ is geared towards creating proof-of-concepts and similar experiments where applications need to crash, loop endlessly or repetitively output a specific status code.
 
