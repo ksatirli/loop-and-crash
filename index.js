@@ -29,6 +29,9 @@ app.get('/status-code', handlers.statusCode);
 // respond with client-requested status code
 app.get('/status-code/:status', handlers.statusCodeWithStatus);
 
+// respond with client-requested delay
+app.get('/delay/:delay', handlers.delay);
+
 // hit the road!
 app.listen(configuration.port, function() {
   console.log('Server started on port ' + configuration.port);
