@@ -3,6 +3,7 @@
 var path = require('path');
 var express = require('express');
 var app = express();
+var handlers = require('./lib/handlers');
 
 var configuration = {
   port: 2774, // = CRSH
@@ -17,28 +18,16 @@ app.get('/', function(req, res) {
 });
 
 // crash server :-)
-app.get('/crash', function() {
-
-  console.log('Going to crash as requested.');
-  console.log('Any error messages below this line are expected.');
-
-  process.exit(1);
-});
+app.get('/crash', handlers.crash);
 
 // loop, endlessly
-app.get('/endless-loop', function() {
-  while (true) {}
-});
+app.get('/endless-loop', handlers.loop);
 
 // show instructions for /status-code
-app.get('/status-code', function(req, res) {
-  res.sendFile(path.join(__dirname + '/status-code.html'));
-});
+app.get('/status-code', handlers.statusCode);
 
 // respond with client-requested status code
-app.get('/status-code/:status', function(req, res) {
-  res.sendStatus(req.params.status);
-});
+app.get('/status-code/:status', handlers.statusCodeWithStatus);
 
 // hit the road!
 app.listen(configuration.port, function() {
