@@ -23,6 +23,9 @@ app.get('/crash', handlers.crash);
 // loop, endlessly
 app.get('/endless-loop', handlers.loop);
 
+// show instructions for /show-get-params
+app.get('/show-get-params', handlers.showGetParams);
+
 // show instructions for /status-code
 app.get('/status-code', handlers.statusCode);
 
