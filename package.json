@@ -1,6 +1,6 @@
 {
   "name": "loop-and-crash",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "An Express-based server that crashes and loops endlessly",
   "main": "index.js",
   "scripts": {
