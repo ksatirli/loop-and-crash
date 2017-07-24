@@ -1,0 +1,16 @@
+---
+
+  pipelines:
+    default:
+      - step:
+          script:
+            # set remote for mirroring
+            - git remote add mirror "https://${MIRROR_TARGET_USER}:${MIRROR_TARGET_PASS}@${MIRROR_TARGET_REPO}"
+
+            # get remotes information
+            - git config --get remote.origin.url
+            - git config --get remote.mirror.url
+
+            # push all information to mirror
+            - git push -u mirror --all
+            - git push mirror --tags
