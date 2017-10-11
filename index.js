@@ -17,6 +17,10 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.get('/style.css', function(req, res) {
+  res.sendFile(path.join(__dirname + '/node_modules/wingcss/dist/wing.css'));
+});
+
 // crash server :-)
 app.get('/crash', handlers.crash);
 
