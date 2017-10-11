@@ -37,7 +37,10 @@ app.get('/status-code', handlers.statusCode);
 app.get('/status-code/:status', handlers.statusCodeWithStatus);
 
 // respond with client-requested delay
-app.get('/delay/:delay', handlers.delay);
+app.get('/delay', handlers.delay);
+
+// respond with client-requested delay
+app.get('/delay/:delay', handlers.delayWithDelay);
 
 // hit the road!
 app.listen(configuration.port, function() {
