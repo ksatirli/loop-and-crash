@@ -2,6 +2,8 @@
 
 > This repository is a [Express-based](https://expressjs.com) server that provides _endless loops_ and _crashes_ as a service. As a bonus feature, you can output client-requested status codes and slow-responding pages, too.
 
+[![Known Vulnerabilities](https://snyk.io/test/github/withmethod/loop-and-crash/badge.svg)](https://snyk.io/test/github/withmethod/loop-and-crash)
+
 ## Table of Contents
 
 - [Requirements](#requirements)
