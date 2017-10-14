@@ -123,3 +123,11 @@ typings/
 
 # dotenv environment variables file
 .env
+
+### repository-specific
+.editorconfig
+.jscsrc
+.jshintrc
+.release-it.json
+.snyk
+screenshot.png

@@ -1,35 +1,50 @@
 # Loop 'n Crash
 
-_Loop 'n Crash_ is an [Express](http://expressjs.com/)-based server that provides _endless loops_ and _crashes_ as a service. As a bonus feature, you can output client-requested status codes and slow-responding pages, too.
+> This repository is a [Express-based](https://expressjs.com) server that provides _endless loops_ and _crashes_ as a service. As a bonus feature, you can output client-requested status codes and slow-responding pages, too.
 
-_Loop 'n Crash_ is geared towards creating proof-of-concepts and similar experiments where applications need to crash, loop endlessly or repetitively output a specific status code.
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+- [Author Information](#author-information)
+- [License](#license)
+
+## Requirements
+
+This repository requires Node.js version `4.x` or newer.
+
+## Dependencies
+
+This repository depends on
 
 ## Usage
 
-Setting up and using `loop-and-crash` is simple and only requires a few steps:
+Start by cloning this [repository](https://github.com/withmethod/loop-and-crash), then change into the freshly-cloned directory (usually named  `loop-and-crash`) and install any dependencies using the `npm install` command.
 
-Start by cloning this [repository](https://bitbucket.org/cultivatedops/loop-and-crash), then change into the application's directory (usually named  `loop-and-crash`) and install any dependencies using the `npm install` command.
+Next, start the application by running `npm start` (or: `node index.js`) and open [localhost:2774](http://localhost:2774/) in a browser.
 
-Next, start the application by running `npm start` (or: `node index.js`) and open [localhost:2774](http://localhost:2774/) in your browser.
+Once the page loads, you will be presented with a list of options supported by _Loop 'n Crash_:
 
-Chose wether to invoke an endless loop, a crash or have the server respond with a specific status code.
+![main screen of Loop 'n Crash](screenshot.png "Loop 'n Crash")
 
-### Screenshot
 
-The following screenshot shows how the application looks like:
+## Author Information
 
-![Preview of the application in PNG format](https://cultivatedops-static.s3.amazonaws.com/projects/loop-and-crash/demo-scale-50.png)
+This module is currently maintained by the individuals listed below.
 
-### Maintainers
+- [Kerim Satirli](https://github.com/ksatirli)
 
-This application is currently maintained by the individuals listed below.
+Development of this module was sponsored by [Method](https://github.com/withmethod).
 
-* [Kerim Satirli](mailto:kerim@cultivatedops.com)
+## License
 
-# License
+Copyright 2017 [Kerim Satirli](https://github.com/ksatirli)
 
-`loop-and-crash` is licensed under the _Apache 2.0_ license. A full copy of the license can be found on the [apache.org](http://www.apache.org/licenses/LICENSE-2.0) site.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 
-In short, this license permits you to use this product commercially, distribute this software and make modifications.
+You may obtain a copy of the License at [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-The software is provided without warranty and any contributors cannot be held liable for damages. You are also not allowed to use any name, logo or trademark without prior consent.
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an _"AS IS"_ basis, without WARRANTIES or conditions of any kind, either express or implied.
+
+See the License for the specific language governing permissions and limitations under the License.

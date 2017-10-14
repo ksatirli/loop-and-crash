@@ -17,6 +17,10 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.get('/style.css', function(req, res) {
+  res.sendFile(path.join(__dirname + '/node_modules/wingcss/dist/wing.css'));
+});
+
 // crash server :-)
 app.get('/crash', handlers.crash);
 
@@ -33,7 +37,10 @@ app.get('/status-code', handlers.statusCode);
 app.get('/status-code/:status', handlers.statusCodeWithStatus);
 
 // respond with client-requested delay
-app.get('/delay/:delay', handlers.delay);
+app.get('/delay', handlers.delay);
+
+// respond with client-requested delay
+app.get('/delay/:delay', handlers.delayWithDelay);
 
 // hit the road!
 app.listen(configuration.port, function() {

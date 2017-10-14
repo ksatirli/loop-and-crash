@@ -3,25 +3,30 @@
   "version": "1.3.3",
   "description": "An Express-based server that crashes and loops endlessly",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "snyk test",
     "start": "node index.js"
   },
-  "author": "Kerim Satirli <kerim@cultivatedops.com>",
-  "license": "Apache-2.0",
-  "dependencies": {
-    "express": "^4.14.0"
-  },
-  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/cultivatedops/loop-and-crash.git"
+    "url": "git+https://github.com/withmethod/loop-and-crash.git"
   },
   "keywords": [
-    "express",
     "crash",
-    "loop",
-    "status-code"
+    "express",
+    "withmethod"
   ],
-  "homepage": "https://bitbucket.org/cultivatedops/loop-and-crash#readme"
+  "author": "Kerim Satirli <kerim@withmethod.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/withmethod/loop-and-crash/issues"
+  },
+  "homepage": "https://github.com/withmethod/loop-and-crash#readme",
+  "dependencies": {
+    "express": "^4.16.1",
+    "wingcss": "^1.0.0-beta"
+  }
 }
