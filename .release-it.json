@@ -6,7 +6,7 @@
 	"buildCommand": "terraform fmt",
 	"changelogCommand": "git log --pretty=format:'* %s (%h)' [REV_RANGE]",
 	"requireCleanWorkingDir": true,
-	"pkgFiles": ["package.json"]
+	"pkgFiles": ["package.json"],
 	"src": {
 		"commitMessage": "Release %s",
 		"tagName": "%s",
