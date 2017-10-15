@@ -3,7 +3,7 @@
 	"dry-run": false,
 	"verbose": true,
 	"increment": "patch",
-	"buildCommand": "terraform fmt",
+	"buildCommand": "npm run-script lint && npm run-script test",
 	"changelogCommand": "git log --pretty=format:'* %s (%h)' [REV_RANGE]",
 	"requireCleanWorkingDir": true,
 	"pkgFiles": ["package.json"],

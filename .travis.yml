@@ -1,0 +1,60 @@
+---
+
+dist: trusty
+sudo: false
+language: node_js
+node_js:
+  - '6'
+
+stages:
+  - name: lint
+  - name: test
+
+git:
+  depth: 1
+  submodules: false
+  lfs_skip_smudge: true
+
+# NOTE: `install` is handled in jobs.include.stage[$stageName].install
+
+before_script:
+  - |
+    echo "Travis Debug information:" &&
+    echo "TRAVIS_BRANCH is ............ ${TRAVIS_BRANCH}" &&
+    echo "TRAVIS_BUILD_ID is .......... ${TRAVIS_BUILD_ID}" &&
+    echo "TRAVIS_BUILD_DIR is ......... ${TRAVIS_BUILD_DIR}" &&
+    echo "TRAVIS_COMMIT is ............ ${TRAVIS_COMMIT}" &&
+    echo "TRAVIS_COMMIT_MESSAGE is .... ${TRAVIS_COMMIT_MESSAGE}" &&
+    echo "TRAVIS_COMMIT_RANGE is ...... ${TRAVIS_COMMIT_RANGE}" &&
+    echo "TRAVIS_EVENT_TYPE is ........ ${TRAVIS_EVENT_TYPE}" &&
+    echo "TRAVIS_JOB_ID is ............ ${TRAVIS_JOB_ID}" &&
+    echo "TRAVIS_JOB_NUMBER is ........ ${TRAVIS_JOB_NUMBER}" &&
+    echo "TRAVIS_SECURE_ENV_VARS is ... ${TRAVIS_SECURE_ENV_VARS}" &&
+    echo "TRAVIS_SUDO is .............. ${TRAVIS_SUDO}" &&
+    echo "TRAVIS_TEST_RESULT is ....... ${TRAVIS_TEST_RESULT}" &&
+    echo "TRAVIS_RUBY_VERSION is ...... ${TRAVIS_RUBY_VERSION}"
+
+jobs:
+  include:
+    - stage: lint
+      install:
+        - |
+          npm install --global jscs jshint
+
+          gem install mdl
+
+      script:
+        - npm run-script lint
+
+    - stage: test
+      install:
+        - npm install --global snyk mocha
+
+        - npm install
+
+      script:
+        -
+
+        - npm install
+
+        - npm run-script test
