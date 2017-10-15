@@ -42,3 +42,6 @@ app.get('/delay/:delay', handlers.delayWithDelay);
 app.listen(configuration.port, function() {
   console.log('Server started on port ' + configuration.port);
 });
+
+// make app available for Chai (and others)
+module.exports = app;
