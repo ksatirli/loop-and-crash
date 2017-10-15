@@ -30,7 +30,6 @@ Once the page loads, you will be presented with a list of options supported by _
 
 ![main screen of Loop 'n Crash](screenshot.png "Loop 'n Crash")
 
-
 ## Author Information
 
 This module is currently maintained by the individuals listed below.

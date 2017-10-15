@@ -1,13 +1,14 @@
 {
   "name": "loop-and-crash",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "An Express-based server that crashes and loops endlessly",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "snyk test",
+    "test": "snyk test && mocha --bail --check-leaks --inline-diffs --exit --no-timeouts",
+    "lint": "jscs *.js lib/*.js test/*.js && jshint *.js lib/*.js test/*.js && mdl README.md",
     "start": "node index.js"
   },
   "repository": {
@@ -28,5 +29,9 @@
   "dependencies": {
     "express": "^4.16.1",
     "wingcss": "^1.0.0-beta"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0"
   }
 }

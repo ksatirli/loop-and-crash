@@ -1,6 +1,5 @@
 'use strict';
 
-var path = require('path');
 var express = require('express');
 var app = express();
 var handlers = require('./lib/handlers');
@@ -13,13 +12,10 @@ var configuration = {
 };
 
 // show instructions
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
-});
+app.get('/', handlers.indexHtml);
 
-app.get('/style.css', function(req, res) {
-  res.sendFile(path.join(__dirname + '/node_modules/wingcss/dist/wing.css'));
-});
+// serve CSS
+app.get('/style.css', handlers.styleCss);
 
 // crash server :-)
 app.get('/crash', handlers.crash);
@@ -36,7 +32,7 @@ app.get('/status-code', handlers.statusCode);
 // respond with client-requested status code
 app.get('/status-code/:status', handlers.statusCodeWithStatus);
 
-// respond with client-requested delay
+// show instructions for /delay
 app.get('/delay', handlers.delay);
 
 // respond with client-requested delay
@@ -46,3 +42,6 @@ app.get('/delay/:delay', handlers.delayWithDelay);
 app.listen(configuration.port, function() {
   console.log('Server started on port ' + configuration.port);
 });
+
+// make app available for Chai (and others)
+module.exports = app;
