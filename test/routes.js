@@ -116,4 +116,44 @@ describe('Routes', () => {
     });
   });
 
+  describe('/info', () => {
+    it('GET /info should be JSON', (done) => {
+      chai.request(server)
+      .get('/info')
+      .end((err, res) => {
+        res.should.have.header('content-type', 'application/json; charset=utf-8');
+        res.should.have.status(200);
+        res.req.res.body.should.exist;
+
+        done();
+      });
+    });
+
+    it('GET /info?interfaces=1 should include network interface(s) information', (done) => {
+      chai.request(server)
+      .get('/info')
+      .query({interfaces: 1})
+      .end((err, res) => {
+        res.should.have.header('content-type', 'application/json; charset=utf-8');
+        res.should.have.status(200);
+        res.req.res.body.network.should.exist;
+        res.req.res.body.network.interfaces.should.exist;
+
+        done();
+      });
+    });
+
+    it('GET /info?environment=1 should include environment information', (done) => {
+      chai.request(server)
+      .get('/info')
+      .query({environment: 1})
+      .end((err, res) => {
+        res.should.have.header('content-type', 'application/json; charset=utf-8');
+        res.should.have.status(200);
+        res.req.res.body.environment.should.exist;
+
+        done();
+      });
+    });
+  });
 });
