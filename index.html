@@ -10,11 +10,18 @@
     <h2>Loop 'n Crash</h2>
     <p>Options:</p>
     <ul>
-      <li>Invoke an <strong>endless loop</strong> in the application by going to <a href="/endless-loop">/endless-loop</a></li>
-      <li>Invoke a <strong>crash</strong> in the application by going to <a href="/crash">/crash</a></li>
-      <li>Invoke a response displaying the GET parameters by going to <a href="/show-get-params?foo=bar">/show-get-params</a></li>
-      <li>Invoke a response with a specific status code by going to <a href="/status-code">/status-code</a> followed by a <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">three-digit status code</a></li>
-      <li>Invoke a slow response by going to <a href="/delay">/delay</a> followed by a number representing the amount of seconds to delay.</li>
+      <li>Invoke an <strong>endless loop</strong> in the application by accessing <a href="/endless-loop">/endless-loop</a></li>
+      <li>Invoke a <strong>crash</strong> in the application by accessing <a href="/crash">/crash</a></li>
+      <li>Invoke a response displaying the GET parameters by accessing <a href="/show-get-params?foo=bar">/show-get-params</a></li>
+      <li>Invoke a response with a specific status code by accessing <a href="/status-code">/status-code</a> followed by a <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">three-digit status code</a></li>
+      <li>Invoke a slow response by accessing <a href="/delay">/delay</a> followed by a number representing the amount of seconds to delay.</li>
+      <li>Display system and process information by accessing <a href="/info">/info</a>.
+        <ul>
+          <li>Display environment information by accessing <a href="/info?environment=1">/info?environment=1</a>.
+          <li>Display network interface information by accessing <a href="/info?interfaces=1">/info?interfaces=1</a>.
+        </ul>
+      </li>
+
     </ul>
   </div>
 </body>

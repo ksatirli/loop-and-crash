@@ -4,6 +4,7 @@
 
 [![Known Vulnerabilities](https://snyk.io/test/github/withmethod/loop-and-crash/badge.svg)](https://snyk.io/test/github/withmethod/loop-and-crash)
 [![Build Status](https://travis-ci.org/withmethod/loop-and-crash.svg?branch=master)](https://travis-ci.org/withmethod/loop-and-crash)
+[![BCH compliance](https://bettercodehub.com/edge/badge/withmethod/loop-and-crash?branch=master)](https://bettercodehub.com/)
 
 ## Table of Contents
 

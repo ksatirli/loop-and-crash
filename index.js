@@ -38,6 +38,9 @@ app.get('/delay', handlers.delay);
 // respond with client-requested delay
 app.get('/delay/:delay', handlers.delayWithDelay);
 
+// show system information
+app.get('/info', handlers.information);
+
 // hit the road!
 app.listen(configuration.port, function() {
   console.log('Server started on port ' + configuration.port);

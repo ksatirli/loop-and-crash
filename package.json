@@ -1,6 +1,6 @@
 {
   "name": "loop-and-crash",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "description": "An Express-based server that crashes and loops endlessly",
   "main": "index.js",
   "directories": {
@@ -22,6 +22,9 @@
   ],
   "author": "Kerim Satirli <kerim@withmethod.com>",
   "license": "Apache-2.0",
+  "bin": {
+    "loop-and-crash": "./bin/runner.js"
+  },
   "bugs": {
     "url": "https://github.com/withmethod/loop-and-crash/issues"
   },
