@@ -1,14 +1,14 @@
-'use strict';
+'use strict'
 
-//During the test the env variable is set to test
-process.env.NODE_ENV = 'test';
+// During the test the env variable is set to test
+process.env.NODE_ENV = 'test'
 
-var chai = require('chai');
-var chaiHttp = require('chai-http');
-var server = require('../index');
-var should = chai.should(); // jshint unused:false
+const chai = require('chai')
+const chaiHttp = require('chai-http')
+const server = require('../index')
+const should = chai.should() // jshint unused:false
 
-chai.use(chaiHttp);
+chai.use(chaiHttp)
 
 describe('Routes', () => {
 
