@@ -28,6 +28,9 @@
   "bugs": {
     "url": "https://github.com/withmethod/loop-and-crash/issues"
   },
+  "standard": {
+    "globals": [ "describe" ]
+  },
   "homepage": "https://github.com/withmethod/loop-and-crash#readme",
   "dependencies": {
     "express": "^4.16.1",
