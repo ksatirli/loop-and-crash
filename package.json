@@ -29,7 +29,7 @@
     "url": "https://github.com/withmethod/loop-and-crash/issues"
   },
   "standard": {
-    "globals": [ "describe" ]
+    "globals": [ "describe", "it" ]
   },
   "homepage": "https://github.com/withmethod/loop-and-crash#readme",
   "dependencies": {
