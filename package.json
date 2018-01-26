@@ -29,6 +29,9 @@
   "bugs": {
     "url": "https://github.com/withmethod/loop-and-crash/issues"
   },
+  "engines": {
+    "node" : ">=6 <9"
+  },
   "standard": {
     "globals": [
       "describe",
