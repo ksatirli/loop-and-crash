@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "snyk test && mocha --bail --check-leaks --inline-diffs --exit --no-timeouts",
-    "lint": "jscs *.js lib/*.js test/*.js && jshint *.js lib/*.js test/*.js && mdl README.md",
+    "prelint": "mdl README.md",
+    "lint": "standard *.js lib/*.js test/*.js",
     "start": "node index.js"
   },
   "repository": {
@@ -29,7 +30,10 @@
     "url": "https://github.com/withmethod/loop-and-crash/issues"
   },
   "standard": {
-    "globals": [ "describe", "it" ]
+    "globals": [
+      "describe",
+      "it"
+    ]
   },
   "homepage": "https://github.com/withmethod/loop-and-crash#readme",
   "dependencies": {
@@ -38,6 +42,9 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "chai-http": "^3.0.0"
+    "chai-http": "^3.0.0",
+    "mocha": "^5.0.0",
+    "snyk": "^1.69.3",
+    "standard": "^10.0.3"
   }
 }

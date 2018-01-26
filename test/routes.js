@@ -6,7 +6,7 @@ process.env.NODE_ENV = 'test'
 const chai = require('chai')
 const chaiHttp = require('chai-http')
 const server = require('../index')
-const should = chai.should() // jshint unused:false
+const should = chai.should()
 
 chai.use(chaiHttp)
 
@@ -16,7 +16,9 @@ describe('Routes', () => {
       chai.request(server)
       .get('/')
       .end((err, res) => {
-        res.should.be.html
+        should.not.exist(err)
+        should.exist(res)
+        res.should.be.html // eslint-disable-line
         res.should.have.status(200)
 
         done()
@@ -29,6 +31,8 @@ describe('Routes', () => {
       chai.request(server)
       .get('/style.css')
       .end((err, res) => {
+        should.not.exist(err)
+        should.exist(res)
         res.should.have.header('content-type', 'text/css; charset=utf-8')
         res.should.have.status(200)
 
@@ -58,9 +62,11 @@ describe('Routes', () => {
       .get('/show-get-params')
       .query({foo: 'bar'})
       .end((err, res) => {
+        should.not.exist(err)
+        should.exist(res)
         res.should.have.header('content-type', 'application/json; charset=utf-8')
         res.should.have.status(200)
-        res.req.res.body.foo.should.exist
+        res.req.res.body.foo.should.exist // eslint-disable-line
 
         done()
       })
@@ -72,7 +78,9 @@ describe('Routes', () => {
       chai.request(server)
       .get('/status-code')
       .end((err, res) => {
-        res.should.be.html
+        should.not.exist(err)
+        should.exist(res)
+        res.should.be.html // eslint-disable-line
         res.should.have.status(200)
 
         done()
@@ -83,6 +91,8 @@ describe('Routes', () => {
       chai.request(server)
       .get('/status-code/200')
       .end((err, res) => {
+        should.not.exist(err)
+        should.exist(res)
         res.should.have.header('content-type', 'text/plain; charset=utf-8')
         res.should.have.status(200)
 
@@ -96,7 +106,9 @@ describe('Routes', () => {
       chai.request(server)
       .get('/delay')
       .end((err, res) => {
-        res.should.be.html
+        should.not.exist(err)
+        should.exist(res)
+        res.should.be.html // eslint-disable-line
         res.should.have.status(200)
 
         done()
@@ -107,6 +119,8 @@ describe('Routes', () => {
       chai.request(server)
       .get('/delay/1')
       .end((err, res) => {
+        should.not.exist(err)
+        should.exist(res)
         res.should.have.header('content-type', 'text/plain; charset=utf-8')
         res.should.have.status(200)
 
@@ -120,9 +134,11 @@ describe('Routes', () => {
       chai.request(server)
       .get('/info')
       .end((err, res) => {
+        should.not.exist(err)
+        should.exist(res)
         res.should.have.header('content-type', 'application/json; charset=utf-8')
         res.should.have.status(200)
-        res.req.res.body.should.exist
+        res.req.res.body.should.exist // eslint-disable-line
 
         done()
       })
@@ -133,10 +149,12 @@ describe('Routes', () => {
       .get('/info')
       .query({interfaces: 1})
       .end((err, res) => {
+        should.not.exist(err)
+        should.exist(res)
         res.should.have.header('content-type', 'application/json; charset=utf-8')
         res.should.have.status(200)
-        res.req.res.body.network.should.exist
-        res.req.res.body.network.interfaces.should.exist
+        res.req.res.body.network.should.exist // eslint-disable-line
+        res.req.res.body.network.interfaces.should.exist // eslint-disable-line
 
         done()
       })
@@ -147,9 +165,11 @@ describe('Routes', () => {
       .get('/info')
       .query({environment: 1})
       .end((err, res) => {
+        should.not.exist(err)
+        should.exist(res)
         res.should.have.header('content-type', 'application/json; charset=utf-8')
         res.should.have.status(200)
-        res.req.res.body.environment.should.exist
+        res.req.res.body.environment.should.exist // eslint-disable-line
 
         done()
       })
