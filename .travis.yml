@@ -39,22 +39,15 @@ jobs:
     - stage: lint
       install:
         - |
-          npm install --global jscs jshint
-
+          npm install
           gem install mdl
-
       script:
-        - npm run-script lint
+        - npm run lint
 
     - stage: test
       install:
-        - npm install --global snyk mocha
-
         - npm install
-
       script:
-        -
-
-        - npm install
-
-        - npm run-script test
+        - |
+          npm install
+          npm run test
