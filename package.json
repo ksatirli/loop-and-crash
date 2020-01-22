@@ -7,34 +7,34 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "snyk test && mocha --bail --check-leaks --inline-diffs --exit --no-timeouts",
-    "lint": "jscs *.js lib/*.js test/*.js && jshint *.js lib/*.js test/*.js && mdl README.md",
+    "test": "script/test",
+    "postinstall": "script/setup",
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/withmethod/loop-and-crash.git"
+    "url": "git+https://github.com/operatehappy/loop-and-crash.git"
   },
   "keywords": [
     "crash",
     "express",
-    "withmethod"
+    "loop"
   ],
-  "author": "Kerim Satirli <kerim@withmethod.com>",
+  "author": "Kerim Satirli <kerim@operatehappy.com>",
   "license": "Apache-2.0",
   "bin": {
     "loop-and-crash": "./bin/runner.js"
   },
   "bugs": {
-    "url": "https://github.com/withmethod/loop-and-crash/issues"
+    "url": "https://github.com/operatehappy/loop-and-crash/issues"
   },
-  "homepage": "https://github.com/withmethod/loop-and-crash#readme",
+  "homepage": "https://github.com/operatehappy/loop-and-crash#readme",
   "dependencies": {
-    "express": "^4.16.1",
+    "express": "^4.17.1",
     "wingcss": "^1.0.0-beta"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-http": "^3.0.0"
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0"
   }
 }
