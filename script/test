@@ -16,7 +16,7 @@ fi
 
 snyk test && \
 
-standard && \
+standard "*.js" "**/**.js" && \
 
 mocha \
     --bail \
