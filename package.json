@@ -28,6 +28,12 @@
   "bugs": {
     "url": "https://github.com/operatehappy/loop-and-crash/issues"
   },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  },
   "homepage": "https://github.com/operatehappy/loop-and-crash#readme",
   "dependencies": {
     "express": "^4.17.1",
