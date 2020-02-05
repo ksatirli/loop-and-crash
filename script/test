@@ -9,6 +9,9 @@ cd "$(dirname "$0")/.." || exit
 if [ -f "${PRECOMMIT_CONFIG}" ]; then
   echo "==> Running pre-commit checks..."
   pre-commit run --config="${PRECOMMIT_CONFIG}" --files ./*.*
+else
+  echo "missing ${PRECOMMIT_CONFIG}, aborting..."
+  exit 1
 fi
 
 mocha \
