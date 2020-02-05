@@ -1,13 +1,14 @@
 'use strict'
 
-var express = require('express')
-var app = express()
-var handlers = require('./lib/handlers')
+const path = require('path')
+const express = require('express')
+const app = express()
+const handlers = require('./lib/handlers')
 
-var configuration = {
+const configuration = {
   port: 2774, // = CRSH
   sendFileOpts: {
-    root: __dirname + '/'
+    root: path.join(__dirname, '/')
   }
 }
 
