@@ -1,6 +1,6 @@
 {
   "name": "loop-and-crash",
-  "version": "1.4.3",
+  "version": "1.6.0",
   "description": "An Express-based server that crashes and loops endlessly",
   "main": "index.js",
   "directories": {
@@ -28,6 +28,12 @@
   "bugs": {
     "url": "https://github.com/operatehappy/loop-and-crash/issues"
   },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  },
   "homepage": "https://github.com/operatehappy/loop-and-crash#readme",
   "dependencies": {
     "express": "^4.17.1",
@@ -35,6 +41,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "chai-http": "^4.3.0"
+    "chai-http": "^4.3.0",
+    "standard": "^14.3.1"
   }
 }
