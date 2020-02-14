@@ -9,6 +9,7 @@ env:
   PARENT_ORG: operatehappy
   META_PATH: dotfiles-org
   SELF_PATH: repository
+  NODE_VERSION: 12
   PYTHON_VERSION: 3.8
   PYTHON_ARCH: x64
   PRECOMMIT_CACHE_PATH: ".cache/pre-commit"
@@ -34,6 +35,14 @@ jobs:
         with:
           fetch-depth: 1
           path: ${{ env.SELF_PATH }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install Node Modules
+        run: npm install --global standard
 
       - name: Setup Python
         uses: actions/setup-python@v1
