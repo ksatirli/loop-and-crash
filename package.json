@@ -8,7 +8,6 @@
   },
   "scripts": {
     "test": "script/test",
-    "postinstall": "script/setup",
     "start": "node index.js"
   },
   "repository": {
